@@ -1,0 +1,164 @@
+=== Run information ===
+
+Scheme:       weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+Relation:     breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:2-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:1
+Instances:    675
+Attributes:   10
+              Clump Thickness
+              Uniformity of Cell Size
+              Uniformity of Cell Shape
+              Marginal Adhesion
+              Single Epithelial Cell Size
+              Bare Nuclei
+              Bland Chromatin
+              Normal Nucleoli
+              Mitoses
+              Class
+=== Associator model (full training set) ===
+
+
+Apriori
+=======
+
+Minimum support: 0.06 (37 instances)
+Minimum metric <confidence>: 0.8
+Number of cycles performed: 19
+
+Generated sets of large itemsets:
+
+Size of set of large itemsets L(1): 35
+
+Size of set of large itemsets L(2): 103
+
+Size of set of large itemsets L(3): 245
+
+Size of set of large itemsets L(4): 360
+
+Size of set of large itemsets L(5): 319
+
+Size of set of large itemsets L(6): 158
+
+Size of set of large itemsets L(7): 42
+
+Size of set of large itemsets L(8): 5
+
+Best rules found:
+
+ 1. Uniformity of Cell Size='(8.2-inf)' Normal Nucleoli='(8.2-inf)' 34 ==> Class=1 34    conf:(1)
+ 2. Marginal Adhesion='(-inf-1.9]' Single Epithelial Cell Size='(-inf-1.9]' 34 ==> Class=0 34    conf:(1)
+ 3. Normal Nucleoli='(8.2-inf)' Mitoses='(-inf-1.9]' 34 ==> Class=1 34    conf:(1)
+ 4. Clump Thickness='(-inf-1.9]' Uniformity of Cell Shape='(-inf-1.9]' Bland Chromatin='(2.8-3.7]' 34 ==> Class=0 34    conf:(1)
+ 5. Clump Thickness='(-inf-1.9]' Marginal Adhesion='(-inf-1.9]' Bland Chromatin='(2.8-3.7]' 34 ==> Class=0 34    conf:(1)
+ 6. Clump Thickness='(-inf-1.9]' Single Epithelial Cell Size='(1.9-2.8]' Bland Chromatin='(1.9-2.8]' 34 ==> Class=0 34    conf:(1)
+ 7. Clump Thickness='(1.9-2.8]' Uniformity of Cell Shape='(-inf-1.9]' Single Epithelial Cell Size='(1.9-2.8]' 34 ==> Class=0 34    conf:(1)
+ 8. Clump Thickness='(2.8-3.7]' Uniformity of Cell Shape='(-inf-1.9]' Bland Chromatin='(1.9-2.8]' 34 ==> Class=0 34    conf:(1)
+ 9. Clump Thickness='(2.8-3.7]' Bland Chromatin='(1.9-2.8]' Normal Nucleoli='(-inf-1.9]' 34 ==> Class=0 34    conf:(1)
+10. Uniformity of Cell Size='(-inf-1.9]' Single Epithelial Cell Size='(-inf-1.9]' Bare Nuclei='(-inf-1.9]' 34 ==> Class=0 34    conf:(1)
+
+
+-----------------Instructions---------------------------------------------------------------------------------------
+
+08:33:27: Weka Explorer
+08:33:27: (c) 1999-2022 The University of Waikato, Hamilton, New Zealand
+08:33:27: web: https://www.cs.waikato.ac.nz/~ml/weka/
+08:33:27: Started on Sunday, 25 August 2024
+08:34:58: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10 (675 instances)
+08:37:29: Command: weka.filters.unsupervised.attribute.AddExpression -E "if (A = 4) then 1 else 0 " -N expression
+08:37:33: Problem filtering instances: Variable 'A' is undefined!
+08:37:45: Command: weka.filters.unsupervised.attribute.AddExpression -E "if (Class = 4) then 1 else 0 " -N expression
+08:37:46: Problem filtering instances: Variable 'Class' is undefined!
+08:37:57: Command: weka.filters.unsupervised.attribute.AddExpression -E "if (10 = 4) then 1 else 0 " -N expression
+08:37:58: Problem filtering instances: Syntax error at token 'IDENTIFIER'!
+08:38:02: Command: weka.filters.unsupervised.attribute.AddExpression -E "if (10 = 4) then 1 else 0 " -N expression
+08:38:04: Problem filtering instances: Syntax error at token 'IDENTIFIER'!
+08:38:59: Command: weka.filters.unsupervised.attribute.NominalToBinary -N -R 10
+08:38:59: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10 (675 instances)
+08:41:36: Command: weka.filters.unsupervised.attribute.MakeIndicator -C 10 -V 4
+08:41:44: Problem filtering instances: Invalid range list at 4
+08:43:20: Command: weka.filters.unsupervised.attribute.NumericToBinary -R last
+08:43:20: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast (675 instances)
+08:46:51: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R last -N "2=0, 4 = 1"
+08:46:52: Problem filtering instances: Invalid replacement string: 2=0
+08:46:54: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R last -N "2=0, 4 = 1"
+08:46:57: Problem filtering instances: Invalid replacement string: 2=0
+08:47:21: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R last -N 2,4,0,1
+08:47:22: Problem filtering instances: Invalid replacement string: 2
+08:48:47: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R last -N 2-0,4-1
+08:49:26: Problem filtering instances: Invalid replacement string: 2-0
+08:49:38: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R last -N "\'2\':\'0\',\'4\':\'1\' "
+08:49:38: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast-weka.filters.unsupervised.attribute.RenameNominalValues-Rlast-N'2':'0','4':'1' (675 instances)
+08:50:07: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast (675 instances)
+08:50:20: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N "\'2\':\'0\',\'4\':\'1\' "
+08:50:20: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N'2':'0','4':'1' (675 instances)
+08:51:22: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast (675 instances)
+08:51:54: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N "2:0,4:1 "
+08:51:55: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.NumericToNominal-R1-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.NumericToBinary-R11-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-weka.filters.unsupervised.attribute.NumericToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-R10-weka.filters.unsupervised.attribute.NominalToBinary-N-R10-weka.filters.unsupervised.attribute.NumericToBinary-Rlast-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:1 (675 instances)
+17:44:46: Base relation is now breast-cancer-wisconsin (699 instances)
+17:48:54: Command: weka.filters.unsupervised.instance.RemoveWithValues -S 0.0 -C 7 -L first-last -M
+17:48:54: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M (683 instances)
+17:50:03: Command: weka.filters.unsupervised.instance.RemoveDuplicates 
+17:50:03: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates (675 instances)
+17:51:20: Command: weka.filters.unsupervised.attribute.Remove -R 1
+17:51:20: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1 (675 instances)
+17:54:15: Command: weka.filters.unsupervised.attribute.Discretize -O -B 10 -M -1.0 -R first-last -precision 6
+17:54:15: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6 (675 instances)
+17:57:36: Command: weka.filters.unsupervised.attribute.NumericToBinary -R 10
+17:57:36: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToBinary-R10 (675 instances)
+17:57:42: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6 (675 instances)
+17:58:29: Command: weka.filters.unsupervised.attribute.NumericToBinary -R 10
+17:58:29: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToBinary-R10 (675 instances)
+17:58:34: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6 (675 instances)
+18:11:21: Command: weka.filters.unsupervised.attribute.NumericToNominal -R 10
+18:11:21: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10 (675 instances)
+18:11:31: Command: weka.filters.unsupervised.attribute.NumericToNominal -R first-last
+18:11:31: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last (675 instances)
+18:13:24: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N 2:0,4:
+18:13:26: Problem filtering instances: Invalid replacement string: 4:
+18:13:36: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N 2:0,4:2
+18:13:36: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:2 (675 instances)
+18:53:35: Started weka.associations.Apriori
+18:53:35: Command: weka.associations.Apriori -N 4 -T 0 -C 0.8 -D 0.05 -U 0.3 -M 0.1 -S -1.0 -A -V -c 10
+18:53:35: Finished weka.associations.Apriori
+20:02:03: Started weka.associations.Apriori
+20:02:03: Command: weka.associations.Apriori -N 4 -T 0 -C 0.8 -D 0.05 -U 0.1 -M 0.05 -S -1.0 -A -V -c 10
+20:02:03: Finished weka.associations.Apriori
+20:05:08: Started weka.associations.Apriori
+20:05:08: Command: weka.associations.Apriori -N 4 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:05:08: Finished weka.associations.Apriori
+20:05:34: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N 2:0,4:1
+20:05:34: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:2-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:1 (675 instances)
+20:05:39: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:2 (675 instances)
+20:06:11: Command: weka.filters.unsupervised.attribute.RenameNominalValues -R 10 -N 2:1
+20:06:11: Base relation is now breast-cancer-wisconsin-weka.filters.unsupervised.instance.RemoveWithValues-S0.0-C7-Lfirst-last-M-weka.filters.unsupervised.instance.RemoveDuplicates-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Discretize-O-B10-M-1.0-Rfirst-last-precision6-weka.filters.unsupervised.attribute.NumericToNominal-R10-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:0,4:2-weka.filters.unsupervised.attribute.RenameNominalValues-R10-N2:1 (675 instances)
+20:06:37: Started weka.associations.Apriori
+20:06:37: Command: weka.associations.Apriori -N 4 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:06:38: Finished weka.associations.Apriori
+20:14:50: Started weka.associations.Apriori
+20:14:50: Command: weka.associations.Apriori -I -N 4 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:14:50: Finished weka.associations.Apriori
+20:22:39: Started weka.associations.Apriori
+20:22:39: Command: weka.associations.Apriori -I -N 10 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:22:39: Finished weka.associations.Apriori
+20:22:52: Started weka.associations.Apriori
+20:22:52: Command: weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:22:52: Finished weka.associations.Apriori
+20:26:13: Started weka.associations.Apriori
+20:26:13: Command: weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.01 -U 0.05 -M 0.005 -S -1.0 -A -V -c 10
+20:26:13: Finished weka.associations.Apriori
+20:26:50: Started weka.associations.Apriori
+20:26:50: Command: weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 0.06 -M 0.005 -S -1.0 -A -V -c 10
+20:26:50: Finished weka.associations.Apriori
+20:27:08: Started weka.associations.Apriori
+20:27:08: Command: weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 0.07 -M 0.005 -S -1.0 -A -V -c 10
+20:27:08: Finished weka.associations.Apriori
+20:28:08: Started weka.associations.Apriori
+20:28:08: Command: weka.associations.Apriori -N 10 -T 0 -C 0.8 -D 0.05 -U 0.08 -M 0.005 -S -1.0 -A -V -c 10
+20:28:08: Finished weka.associations.Apriori
+20:30:54: Started weka.associations.Apriori
+20:30:54: Command: weka.associations.Apriori -N 10 -T 0 -C 0.7 -D 0.05 -U 0.08 -M 0.005 -S -1.0 -A -V -c 10
+20:30:54: Finished weka.associations.Apriori
+20:31:11: Started weka.associations.Apriori
+20:31:11: Command: weka.associations.Apriori -N 10 -T 0 -C 0.7 -D 0.05 -U 0.06 -M 0.005 -S -1.0 -A -V -c 10
+20:31:11: Finished weka.associations.Apriori
+21:20:40: Memory (free/total/max.) in bytes: 96,328,232 / 155,189,248 / 2,053,111,808
+
